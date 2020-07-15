@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diff bet Var,Let,Const</title>
+    </head>
+    <body>
+        <h1>Q2: Difference between var,let,const</h1>
+        <h3>var:</h3>
+        <p>var variables are globally as well as function/locally scoped .It means if we define it outside the function then they are globally scoped if they are defined inside the function they are locally scoped and can’t be used outside the function.<br>
+        Now one of the major problem in is that they can be re declared means if we have already declared a variable with some particular name then we can re declare it with same name and differently and it’s value will be updated. If this is done knowingly but it becomes a problem when you too many lines of code and you don’t remember each variable you have defined.
+        </p>
+        <script>
+            // var x,y,z are globally defined
+            var x=10;
+            var y=2;
+            var z;
+            function add(){
+                var y=7;  //here y is locall redeclared.
+                var z=x+y;
+                console.log("Local variable:",z); //as x,y,z is globally defined Answer will be printed here
+            }
+            add();
+            var z=x+y;
+            console.log("global variable:",z);
+            var y= 5; //As variable name can be redeclared ,it is an major problem.
+            var z=x+y;
+            console.log("global variable after y value reassigned:",z);
+        </script>
+        <br>
+        <h3>let:</h3>
+        <p>Let variables are block scoped , means that they can be used within the curly brackets {} they are defined .Now better part in Let than var is that we can update the let variables but we cannot re declare them.
+        <br>
+        Now but one thing is if we define a new variable x with let keyword inside a function then it will not throw any error since they are defined in different scopes.
+        </p>
+        <script>
+        //let x=6; this will throw an error that x is already defined ,so it cannot be redeclared
+        function add2(){ 
+            let x=5;
+            let y=2;
+            let z;
+            z=x*y;
+            console.log("using let inside bracket : for same variable name",z);
+        }   
+        add2();
+        console.log("as variable cannod be redeclared with let the var value will be printed:",x);  //here global value  which is defined by var x=10 will be printed
+        </script>
+        <br>
+        <h3>const:</h3>
+        <p>Similar to let const are also block scoped and can be accessed only within the curly brackets they have been defined<br>
+        So the difference between let and const is we can neither re declare or update the value of const variable
+        </p>
+        <script>
+            const detail={name:"Vaibhav",id: 01}
+            // const detail={name:"yash",id: 02} This will throw an error as we cannot reassign values 
+            //but we can update the values
+            detail.name=("abc");
+            console.log(detail);
+        </script>
+    </body>
+</html>
