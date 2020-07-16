@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Methods of String and Arrays</title>
+    </head>
+    <body>
+        <h1>Methods of String and Arrays</h1>
+        <h2>String Methods</h2>
+        <h3>String Length</h3>
+        <p>The length property returns the length of a string:
+            <br>
+            var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+            var sln = txt.length; 
+        </p>
+        <h3>Searching for a String in a String</h3>
+        <p>The search() method searches a string for a specified value and returns the position of the match:<br>
+            var str = "Please locate where 'locate' occurs!";<br>
+            var pos = str.search("locate");</p>
+        <h3>The slice() Method</h3>
+        <p>slice() extracts a part of a string and returns the extracted part in a new string.
+            The method takes 2 parameters: the start position, and the end position (end not included).
+            This example slices out a portion of a string from position 7 to position 12 (13-1):<br>
+            var str = "Apple, Banana, Kiwi";<br>
+            var res = str.slice(7, 13);</p>
+        <h3>Replacing String Content</h3>
+        <p>The replace() method replaces a specified value with another value in a string:
+            <br>
+            str = "Please visit Microsoft!";<br>
+var n = str.replace("Microsoft", "W3Schools");
+        </p>
+        <br>
+        <h2>Array Methods</h2>
+        <h3>Converting Arrays to Strings</h3>
+        <p>
+            The JavaScript method toString() converts an array to a string of (comma separated) array values.<br>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+document.getElementById("demo").innerHTML = fruits.toString();
+        </p>
+        <h3>Popping</h3>
+        <p>The pop() method removes the last element from an array: <br>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.pop();     </p>
+    </body>
+</html>
